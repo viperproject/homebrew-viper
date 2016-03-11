@@ -4,6 +4,7 @@ class Viper < Formula
   homepage "http://www.pm.inf.ethz.ch/research/viper.html"
   url "https://bintray.com/artifact/download/vakaras/generic/viper.tar.gz"
   sha256 "b65cb59fb57526abce2d84f5a7f9833ceff4e699057cf20cf183266f82021259"
+  version "0.1"
 
   resource "silver" do
     url "https://bintray.com/artifact/download/vakaras/generic/viper.silver-0.1-SNAPSHOT.jar"
