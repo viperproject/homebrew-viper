@@ -8,7 +8,7 @@ class Viper < Formula
 
   resource "silver" do
     url "https://bintray.com/artifact/download/vakaras/generic/viper.silver-0.1-SNAPSHOT.jar"
-    sha1 "8ac925763c335ea7ef90b0a6515dd05925f44a1f837cecbac449d652b57f949e"
+    sha256 "8ac925763c335ea7ef90b0a6515dd05925f44a1f837cecbac449d652b57f949e"
   end
 
   def install
