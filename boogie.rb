@@ -1,11 +1,11 @@
+
+require "formula"
 class Boogie < Formula
-  desc "Boogie is an Intermediate Verification Language (IVL) for describing proof obligations to be discharged by a reasoning engine, typically an SMT solver."
   homepage "http://boogie.codeplex.com"
   url "https://github.com/boogie-org/boogie.git"
-  sha256 "4d1a71e3bde406426df7adbc726c25486a75e7d234faa76d58929bd82f3f4a5c"
   version "2.3"
 
-  depends_on "mono"# => :build
+  depends_on "mono"
 
   def install
     system "curl", "-L", "-o", "nuget.exe", "https://nuget.org/nuget.exe"
