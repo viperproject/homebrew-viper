@@ -3,6 +3,7 @@ class Viper < Formula
   homepage "http://www.pm.inf.ethz.ch/research/viper.html"
   url "https://bintray.com/artifact/download/vakaras/generic/viper_0.1-13.tar.gz"
   sha256 "fcf8cf63a35febfe85b3d44fa3e516cdd990b1839e7dc9d8cf49032e904aadd3"
+  depends_on "nailgun"
   depends_on "boogie"
   depends_on "viper-z3"
   resource "viper-com.google.guava.guava" do
@@ -81,14 +82,17 @@ class Viper < Formula
     inreplace "silicon", "/usr/lib/viper", "#{prefix}"
     inreplace "silicon", "/usr/bin/viper-z3", "/usr/local/bin/z3"
     inreplace "silicon", "/usr/bin/boogie", "/usr/local/bin/boogie"
+    inreplace "silicon", "NAILGUN_JAR=", "NAILGUN_JAR=/usr/local/Cellar/nailgun/0.9.1/libexec/nailgun-server-0.9.1.jar:"
     bin.install "silicon"
     inreplace "carbon", "/usr/lib/viper", "#{prefix}"
     inreplace "carbon", "/usr/bin/viper-z3", "/usr/local/bin/z3"
     inreplace "carbon", "/usr/bin/boogie", "/usr/local/bin/boogie"
+    inreplace "carbon", "NAILGUN_JAR=", "NAILGUN_JAR=/usr/local/Cellar/nailgun/0.9.1/libexec/nailgun-server-0.9.1.jar:"
     bin.install "carbon"
     inreplace "chalice2silver", "/usr/lib/viper", "#{prefix}"
     inreplace "chalice2silver", "/usr/bin/viper-z3", "/usr/local/bin/z3"
     inreplace "chalice2silver", "/usr/bin/boogie", "/usr/local/bin/boogie"
+    inreplace "chalice2silver", "NAILGUN_JAR=", "NAILGUN_JAR=/usr/local/Cellar/nailgun/0.9.1/libexec/nailgun-server-0.9.1.jar:"
     bin.install "chalice2silver"
     prefix.install resource("viper-com.google.guava.guava")
     prefix.install resource("viper-commons-io.commons-io")
