@@ -79,10 +79,16 @@ class Viper < Formula
   end
   def install
     inreplace "silicon", "/usr/lib/viper", "#{prefix}"
+    inreplace "silicon", "/usr/bin/viper-z3", "/usr/local/bin/z3"
+    inreplace "silicon", "/usr/bin/boogie", "/usr/local/bin/boogie"
     bin.install "silicon"
     inreplace "carbon", "/usr/lib/viper", "#{prefix}"
+    inreplace "carbon", "/usr/bin/viper-z3", "/usr/local/bin/z3"
+    inreplace "carbon", "/usr/bin/boogie", "/usr/local/bin/boogie"
     bin.install "carbon"
     inreplace "chalice2silver", "/usr/lib/viper", "#{prefix}"
+    inreplace "chalice2silver", "/usr/bin/viper-z3", "/usr/local/bin/z3"
+    inreplace "chalice2silver", "/usr/bin/boogie", "/usr/local/bin/boogie"
     bin.install "chalice2silver"
     prefix.install resource("viper-com.google.guava.guava")
     prefix.install resource("viper-commons-io.commons-io")
