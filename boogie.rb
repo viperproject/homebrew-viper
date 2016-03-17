@@ -1,4 +1,3 @@
-
 require "formula"
 class Boogie < Formula
   homepage "http://boogie.codeplex.com"
@@ -8,6 +7,7 @@ class Boogie < Formula
   depends_on "mono"
 
   def install
+
     system "curl", "-L", "-o", "nuget.exe", "https://nuget.org/nuget.exe"
     system "mono", "nuget.exe", "restore", "./Source/Boogie.sln"
     system "xbuild", "Source/Boogie.sln"
