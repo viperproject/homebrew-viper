@@ -4,8 +4,6 @@ class Boogie < Formula
   url "https://github.com/boogie-org/boogie.git"
   version "2.3"
 
-  depends_on "mono"
-
   def install
 
     system "curl", "-L", "-o", "nuget.exe", "https://nuget.org/nuget.exe"
