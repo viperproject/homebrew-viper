@@ -1,6 +1,6 @@
 require "formula"
 class Viper < Formula
-  homepage "http://www.pm.inf.ethz.ch/research/viper.html"
+  homepage "http://viper.ethz.ch"
   url "https://bintray.com/artifact/download/vakaras/generic/viper_0.1-20.tar.gz"
 
   depends_on "nailgun"
